@@ -54,7 +54,7 @@ $(function(){
 		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
-		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+		var $columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 		
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
@@ -109,7 +109,7 @@ $(function(){
 	
 	   this.id = id;
         this.name = name || 'No name given';
-	   this.element = createCard();
+	   this.$element = createCard();
 
 	   function createCard() {
 		  var card = $('<li class="card"></li>');
